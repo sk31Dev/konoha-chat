@@ -1,0 +1,21 @@
+{
+  "name": "konoha-chat",
+  "version": "1.0.0",
+  "description": "konoha-chat-channel",
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/server.js"
+  },
+  "author": "Shubham Kukreti",
+  "license": "",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/socket.io": "^3.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
