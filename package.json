@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/src/server.js"
+    "start": "node dist/server.js"
   },
   "author": "Shubham Kukreti",
   "license": "",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "express": "^4.19.2",
-    "socket.io": "^4.7.5"
+    "socket.io": "^4.7.5",
+    "unique-names-generator": "^4.7.1"
   }
 }
