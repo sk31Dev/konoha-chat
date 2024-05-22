@@ -8,7 +8,7 @@
       }
       #messages {
         list-style-type: none;
-        padding: 0;
+        padding: 20px;
       }
       #messages li {
         padding: 8px;
@@ -17,14 +17,21 @@
       }
       #form {
         display: flex;
+        padding: 20px 20px;
       }
       #input {
         flex: 1;
         padding: 10px;
+        margin-right: 8px;
       }
       .username {
         font-weight: bold;
         color: blue;
+      }
+      .send-icon {
+        width: 24px;
+        height: 24px;
+        fill: white;
       }
     </style>
     <link
@@ -38,7 +45,13 @@
     <ul id="messages"></ul>
     <form id="form" action="">
       <input id="input" autocomplete="off" /><button class="btn btn-primary">
-        Send
+        <svg
+          class="send-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+        </svg>
       </button>
     </form>
     <script
@@ -71,7 +84,7 @@
 
       socket.on("chat message", (data) => {
         const item = document.createElement("li");
-        item.textContent = `${data.username}: ${data.msg}`;
+        item.innerHTML = `<span class="username">${data.username}</span>: ${data.msg}`; // Use innerHTML to include styling
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
