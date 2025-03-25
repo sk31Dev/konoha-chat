@@ -5,24 +5,37 @@
     <style>
       body {
         font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
       #messages {
         list-style-type: none;
         padding: 20px;
+        margin: 0;
+        max-height: calc(
+          100vh - 120px
+        ); /* Adjust height based on form and padding */
+        overflow-y: auto; /* Enable scrolling for messages */
       }
       #messages li {
         padding: 8px;
         margin-bottom: 10px;
         background-color: #f4f4f4;
+        border-radius: 5px; /* Rounded corners for messages */
       }
       #form {
         display: flex;
-        padding: 20px 20px;
+        padding: 10px 20px;
+        background-color: #f8f8f8;
+        border-top: 1px solid #ddd;
       }
       #input {
         flex: 1;
         padding: 10px;
         margin-right: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px; /* Rounded corners for input */
       }
       .username {
         font-weight: bold;
@@ -32,6 +45,27 @@
         width: 24px;
         height: 24px;
         fill: white;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+        border-radius: 5px; /* Rounded corners for button */
+      }
+      @media (max-width: 600px) {
+        #form {
+          flex-direction: column;
+        }
+        #input {
+          margin: 0 0 10px 0;
+        }
+        button {
+          width: 100%;
+        }
       }
     </style>
     <link
@@ -59,7 +93,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
     <script src="/socket.io/socket.io.js"></script>
     <script>
       const socket = io();
