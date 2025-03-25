@@ -21,7 +21,6 @@ Konoha Chat is a simple real-time chat application built with **Node.js**, **Exp
    ```bash
    git clone https://github.com/sk31Dev/konoha-chat.git
    cd konoha-chat
-
    ```
 
 2. Install dependencies:
@@ -61,13 +60,13 @@ npm start
 
 ## File Descriptions
 
-src/server.ts: Contains the server logic, including WebSocket events and random username generation.
+- src/server.ts: Contains the server logic, including WebSocket events and random username generation.
 
-public/index.html: Frontend HTML file with embedded JavaScript for handling chat functionality.
+- public/index.html: Frontend HTML file with embedded JavaScript for handling chat functionality.
 
-tsconfig.json: TypeScript configuration file for compiling the code.
+- tsconfig.json: TypeScript configuration file for compiling the code.
 
-.gitignore: Specifies files and directories to be ignored by Git.
+- .gitignore: Specifies files and directories to be ignored by Git.
 
 ## License
 
