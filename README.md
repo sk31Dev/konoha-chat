@@ -52,12 +52,12 @@ npm start
 
 ## Technologies Used
 
-Node.js: Backend runtime environment.
-Express: Web framework for serving static files and handling routes.
-Socket.IO: Real-time communication between the server and clients.
-TypeScript: Strongly typed JavaScript for better development experience.
-Bootstrap: CSS framework for responsive design.
-unique-names-generator: Library for generating random usernames.
+- Node.js: Backend runtime environment.
+- Express: Web framework for serving static files and handling routes.
+- Socket.IO: Real-time communication between the server and clients.
+- TypeScript: Strongly typed JavaScript for better development experience.
+- Bootstrap: CSS framework for responsive design.
+- unique-names-generator: Library for generating random usernames.
 
 ## File Descriptions
 
